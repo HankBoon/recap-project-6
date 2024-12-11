@@ -46,14 +46,20 @@ export default function Form({ onSubmit, formName, defaultData }) {
         id="image-url"
         name="image"
         type="text"
-        defaultValue={defaultData?.image}
+        defaultValue={
+          defaultData?.image ||
+          "https://images.unsplash.com/photo-1599827552599-eadf5fb3c75f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTh8fHJlZXBlcmJhaG4lMjBoYW1idXJnfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=900&q=60"
+        }
       />
       <Label htmlFor="location">Location</Label>
       <Input
         id="location"
         name="location"
         type="text"
-        defaultValue={defaultData?.location}
+        defaultValue={
+          defaultData?.location ||
+          "https://www.google.com/maps/place/Reeperbahn,+Hamburg/@53.5491522,9.9606555,15.91z/data=!4m5!3m4!1s0x47b18f720653ed5f:0xe81438a344df5125!8m2!3d53.5495695!4d9.9626148"
+        }
       />
       <Label htmlFor="map-url">Map Url</Label>
       <Input
