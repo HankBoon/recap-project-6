@@ -1,5 +1,5 @@
-import Place from "@/pages/db/models/Place";
-import dbConnect from "@/pages/db/connect";
+import Place from "@/db/models/Place";
+import dbConnect from "@/db/connect";
 
 export default async function handler(request, response) {
   await dbConnect();
@@ -9,5 +9,4 @@ export default async function handler(request, response) {
   } else {
     return response.status(405).json({ message: "Method not allowed!" });
   }
-  return;
 }
